@@ -16,7 +16,4 @@ RUN apk --no-cache add python py-pip git &&\
     rm -rf /code /usr/lib/python2.7/ /root/.cache /var/cache/apk/* &&\
     chmod +x /usr/local/bin/docker-compose
 
-COPY rootfs/ /
-
-CMD ["up"]
-ENTRYPOINT ["/opt/docker-bootstrap/bootstrap.sh"]
+ENTRYPOINT ["/usr/local/bin/docker-compose"]
