@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:edge
 
 ARG compose_version=1.8.0
 
