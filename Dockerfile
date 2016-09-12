@@ -2,7 +2,7 @@ FROM alpine:edge
 
 ARG compose_version=1.8.0
 
-RUN apk --no-cache add python py-pip git &&\
+RUN apk --no-cache add python py2-pip git &&\
     git clone --branch ${compose_version} https://github.com/docker/compose.git /code/compose &&\
     cd /code/compose &&\
     pip --no-cache-dir install -r requirements.txt -r requirements-dev.txt pyinstaller==3.1.1 &&\
